@@ -39,8 +39,7 @@ public class TestInteger {
 	/**
 	 * @author 北飞的候鸟
 	 * 
-	 * 這段沒太明白，大概是用反射將緩存中的数字改了
-	 * 谁可以给我讲下，三克油
+	 * 用反射將緩存中的数字改了
 	 * 
 	 */
 	@SuppressWarnings("rawtypes")

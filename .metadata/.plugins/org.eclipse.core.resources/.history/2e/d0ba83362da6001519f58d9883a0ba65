@@ -1,0 +1,24 @@
+package com.example.array;
+
+public class MyArrayList {
+	
+	/**
+	 * 
+	 */
+	Object value;
+	
+	/**
+	 * 
+	 */
+	int size;
+	
+	public MyArrayList(){
+		value = new Object[16];
+	}
+	
+	public MyArrayList(int size){
+		value = new Object[size];
+	}
+	
+
+}

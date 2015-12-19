@@ -1,0 +1,14 @@
+package com.example.array;
+
+public class TestArray2 {
+
+	public static void main(String[] args) {
+		
+		//æ≤Ã¨≥ı ºªØ
+		int[][] a ={ {1,2,3},
+				 	{2,3,4},
+				 	{3,4,5}
+				  };
+
+	}
+}

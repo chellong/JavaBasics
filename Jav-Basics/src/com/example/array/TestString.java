@@ -6,6 +6,9 @@ public class TestString {
 
 		String str = "123";
 		System.out.println(str.charAt(2));
+		
+		String str1 = "123";
+		System.out.println(str == str1);
 	}
 
 }

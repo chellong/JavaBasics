@@ -1,0 +1,11 @@
+package com.example.algorithm;
+/**
+ * 
+ * 二分查找
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class BinarySearch {
+
+}

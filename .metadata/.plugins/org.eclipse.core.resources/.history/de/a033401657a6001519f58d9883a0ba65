@@ -1,0 +1,14 @@
+package com.example.algorithm;
+/**
+ * 
+ * 二分查找
+ * 查找前数组必须有序
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class BinarySearch {
+	
+	
+
+}

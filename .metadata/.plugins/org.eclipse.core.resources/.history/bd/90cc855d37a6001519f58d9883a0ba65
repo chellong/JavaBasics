@@ -1,0 +1,44 @@
+package com.example.array;
+
+public class TestArray2 {
+	
+	public static void TestMatrix() {
+		int[][] a = { { 1, 3 }, { 2, 4 } };
+		int[][] b = { { 3, 4 }, { 5, 6 } };
+		int[][] c = new int[2][2];
+
+		for (int i = 0; i < 2; i ++) {
+			for(int j = 0; j < 2;j ++){
+				c[i][j] = a[i][j] + b[i][j];
+			}
+		}
+		
+		for(int[] s : c){
+			for(int[] b : s){
+				
+			}
+		}
+		
+
+	}
+	
+	@SuppressWarnings("unused")
+	public static void testArray(){
+		
+
+		// 二维数组静态初始化
+		int[][] a = { { 1, 2, 3 }, { 2, 3, 4 }, { 3, 4, 5 } };
+
+		/**
+		 * 必须先定义一维
+		 */
+		int[][] b = new int[3][];
+		
+	}
+
+	public static void main(String[] args) {
+		//testArray();
+		TestMatrix();
+	}
+
+}

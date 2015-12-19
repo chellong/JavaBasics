@@ -1,0 +1,18 @@
+package com.example.testwrapperclass;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		Integer i = new Integer(1000);
+		Double d = new Double(10);
+		
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.MIN_VALUE);
+		
+		System.out.println(i.intValue());
+		System.out.println(i.doubleValue());
+		System.out.println(Integer.toHexString(i));
+	}
+
+}

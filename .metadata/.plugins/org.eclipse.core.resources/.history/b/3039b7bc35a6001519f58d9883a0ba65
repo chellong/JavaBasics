@@ -1,0 +1,21 @@
+package com.example.array;
+
+public class TestArray2 {
+
+	
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		
+		//二维数组静态初始化
+		int[][] a ={ 
+						{1,2,3},
+						{2,3,4},
+						{3,4,5}
+					};
+
+		/**
+		 * 必须先定义一维
+		 */
+		int[][] b = new int[3][]; 
+	}
+}

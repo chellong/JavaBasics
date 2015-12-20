@@ -1,0 +1,40 @@
+package com.example.testexception;
+
+/**
+ * Throwable
+ * --Error
+ * --Exception {checkedException && uncheckedExcrption}
+ * ----
+ * @author 北飞的候鸟
+ *
+ */
+public class Test {
+
+	public static void main(String[] args) {
+		
+		//uncheckedExcrption
+		try{
+			int i = 6/0;
+		}catch(ArithmeticException e){
+			e.printStackTrace();
+			System.out.println("除数为'0'");
+		}
+		//checkedException
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		TestClass testClass = null;
+		testClass.start();
+		
+		
+	}
+	
+	class TestClass{
+		public void start(){
+			System.out.println("start");
+		}
+	}
+}

@@ -1,0 +1,55 @@
+package com.example.testutils;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Scanner;
+
+/**
+ * 1、根据输入显示可视化的日历 2、"\t" 制表符 3、"\n" 换行符
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class VisualCalendar {
+
+	public static void main(String[] args) {
+
+		Scanner in = new Scanner(System.in);
+		String str = in.next();
+		in.close();
+
+		DateFormat dft = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			Date date = dft.parse(str);
+			System.out.println(date);
+
+			Calendar calendar = new GregorianCalendar();
+			calendar.setTime(date);
+			calendar.set(Calendar.DATE, 1);
+
+			int week = calendar.get(Calendar.DAY_OF_WEEK);
+			System.out.println(week);
+			int maxDay = calendar.getActualMaximum(Calendar.DATE);
+			System.out.println("日\t一\t二\t三\t四\t五\t六\t");
+
+			for (int i = 1; i < week - 1; i++) {
+				System.out.print("\t");
+			}
+			for (int i = 1; i <= maxDay; i++) {
+				System.out.print(i + "\t");
+
+				if (week == 7) {
+					System.out.println();
+				}
+				calendar.add(Calendar.DATE, 1);
+			}
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

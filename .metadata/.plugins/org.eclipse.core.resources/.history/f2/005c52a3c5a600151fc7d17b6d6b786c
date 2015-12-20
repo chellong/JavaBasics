@@ -1,0 +1,17 @@
+package com.example.testutils;
+
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class VisualCalendar {
+	
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		String str = in.next();
+		in.close();
+		
+		Calendar
+	}
+
+}

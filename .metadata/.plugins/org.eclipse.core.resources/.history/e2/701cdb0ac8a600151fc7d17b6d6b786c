@@ -1,0 +1,49 @@
+package com.example.testutils;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Scanner;
+
+/**
+ * 1、根据输入显示可视化的日历
+ * 2、"\t" 制表符
+ * @author 北飞的候鸟
+ *
+ */
+public class VisualCalendar {
+	
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		String str = in.next();
+		in.close();
+		
+		DateFormat dft = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			Date date = dft.parse(str);
+			Calendar calendar = new GregorianCalendar();
+			calendar.setTime(date);
+			calendar.set(Calendar.DATE, 1);
+
+			System.out.println(calendar.DAY_OF_WEEK);
+			System.out.println(calendar.getActualMaximum(calendar.DATE));
+			
+			System.out.println(dft);
+			
+			System.out.println("日\t一\t二\t三\t四\t五\t六\t");
+			for(int i = 1; i <= 31 ;i++){
+				System.out.print(i + "\t");
+				if(i % 7 == 0){
+					System.out.println();
+				}
+			}
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

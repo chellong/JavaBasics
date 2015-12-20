@@ -1,0 +1,12 @@
+package com.example.testexception;
+
+import java.io.FileReader;
+
+public class FileIO {
+
+	public static void main(String[] args) {
+
+		FileReader reader = null;
+	}
+
+}

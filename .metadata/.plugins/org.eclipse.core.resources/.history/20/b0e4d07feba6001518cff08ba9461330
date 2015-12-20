@@ -1,0 +1,13 @@
+package com.example.game;
+
+import java.awt.Frame;
+
+/**
+ * GUI×ƒ³É£¬awt£¬swing
+ * 
+ * @author ±±·ÉµÄºòÄñ
+ *
+ */
+public class GameFrame extends Frame{
+
+}

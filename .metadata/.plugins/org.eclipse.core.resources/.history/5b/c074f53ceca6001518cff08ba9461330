@@ -1,0 +1,21 @@
+package com.example.game;
+
+import java.awt.Frame;
+
+/**
+ * GUI×ƒ³É£¬awt£¬swing
+ * 
+ * @author ±±·ÉµÄºòÄñ
+ *
+ */
+public class GameFrame extends Frame{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3187915630805806272L;
+
+	public void launchFrame(){
+		this.setSize(500, 500);
+	}
+}

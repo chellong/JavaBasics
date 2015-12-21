@@ -1,0 +1,34 @@
+package com.example.plane;
+
+import java.awt.Graphics;
+import java.awt.Image;
+
+import com.example.util.MyFrame;
+import com.example.util.ResourceUtil;
+
+public class PlaneGameFrame extends MyFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 391225611844072051L;
+
+	Image bground = ResourceUtil.getImage("");
+	Image plane = ResourceUtil.getImage("");
+	
+	public void paint(Graphics g){
+		if(bground != null && plane != null){
+			g.drawImage(bground, 0, 0, null);
+			g.drawImage(plane, 0, 0,null);
+		}
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		PlaneGameFrame frame = new PlaneGameFrame();
+		frame.launchFrame();
+	}
+}

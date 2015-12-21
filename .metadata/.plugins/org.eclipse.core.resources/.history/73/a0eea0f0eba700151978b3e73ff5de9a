@@ -1,0 +1,17 @@
+package com.example.plane;
+
+import java.awt.Image;
+
+import com.example.util.ResourceUtil;
+
+public class Plane {
+	
+	Image plane = ResourceUtil.getImage("");
+	double x;
+	double y;
+	
+	public void draw(Graphics g){
+		
+	}
+
+}

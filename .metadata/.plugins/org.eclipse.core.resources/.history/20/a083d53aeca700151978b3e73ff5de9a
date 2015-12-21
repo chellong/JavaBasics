@@ -1,0 +1,40 @@
+package com.example.plane;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+
+import com.example.util.MyFrame;
+import com.example.util.ResourceUtil;
+
+public class PlaneGameFrame extends MyFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 391225611844072051L;
+
+	
+	private Image bground = ResourceUtil.getImage("");
+	private Plane plane = new Plane();
+	
+	public void paint(Graphics g){
+		
+		if(bground != null ){
+			g.drawImage(bground, 0, 0, null);
+		}else{
+			setBackground(Color.white);
+		}
+		plane.draw(g);
+		
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		PlaneGameFrame frame = new PlaneGameFrame();
+		frame.launchFrame();
+	}
+}

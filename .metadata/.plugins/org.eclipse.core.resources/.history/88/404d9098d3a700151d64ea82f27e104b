@@ -1,0 +1,10 @@
+package com.example.solar;
+
+import java.awt.Image;
+
+public class Star {
+	
+	protected Image img;
+	protected double x,y;
+
+}

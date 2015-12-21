@@ -52,7 +52,7 @@ public class MyFrame extends Frame {
 			while (true) {
 				repaint();
 				try {
-					Thread.sleep(8);
+					Thread.sleep(80);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}

@@ -1,0 +1,45 @@
+package com.example.solar;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+
+import com.example.constant.Constant;
+import com.example.util.MyFrame;
+import com.example.util.ResourceUtil;
+
+public class SolarFrame extends MyFrame {
+
+	/**
+	 * 
+	 * 圖片地址全為空
+	 * 
+	 * 畫小點
+	 */
+	private static final long serialVersionUID = 8252689854938965802L;
+	
+	private Image bg = ResourceUtil.getImage("com.example.images");
+	
+	private Star sun = new Star("com.example.images","sun",Constant.GAME_WIDTH / 2, Constant.GAME_HEIGHT / 2);
+	private Planet earth = new Planet(sun,"地球", "com.example.images",150, 100, 0.1);
+	private Planet mars = new Planet(sun,"火星", "com.example.images",150, 100, 0.1);
+	
+	@Override
+	public void paint(Graphics g) {
+		if( bg != null){
+			g.drawImage(bg,0,0,null);
+		}else{
+			setBackground(new Color(199,237,204));
+		}
+	
+		sun.draw(g);
+		earth.draw(g);
+	}
+	
+	public static void main(String[] args) {
+		
+		SolarFrame frame = new SolarFrame();
+		frame.launchFrame();
+	}
+
+}

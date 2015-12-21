@@ -1,0 +1,26 @@
+package com.example.solar;
+
+import java.awt.Graphics;
+import java.awt.Image;
+
+public class Star {
+	
+	private Image img;
+	private double x,y;
+	
+	
+	public Star(Image img,double x,double y){
+		
+		this.img = img;
+		this.x = x;
+		this.y = y;
+	}
+	
+	public Star(String imgPath,double x,double y){
+		
+	}
+	
+	public void draw(Graphics g){
+		g.drawImage(img, (int)x,(int)y,null);
+	}
+}

@@ -1,7 +1,0 @@
-package com.example.solar;
-
-import com.example.util.MyFrame;
-
-public class SolarFrame extends MyFrame {
-
-}

@@ -2,7 +2,6 @@ package com.example.util;
 
 import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.net.URL;
 
 import javax.imageio.ImageIO;
@@ -29,11 +28,14 @@ public class ResourceUtil {
 		BufferedImage img = null;
 		try {
 			img = ImageIO.read(url);
-		} catch (IOException e) {
-			e.printStackTrace();
+			return img;
+		} catch (Exception e) {
+			//e.printStackTrace();
+			System.out.println("没有获取到图片");
+			return null;
+		}finally{
+			url = null;
 		}
-		
-		return img;
 		
 	}
 

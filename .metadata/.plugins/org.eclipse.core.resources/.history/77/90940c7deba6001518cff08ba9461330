@@ -1,7 +1,0 @@
-package com.example.game;
-
-import java.awt.Frame;
-
-public class GameFrame extends Frame{
-
-}

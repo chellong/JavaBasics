@@ -1,0 +1,12 @@
+package com.example.game;
+
+import java.awt.Frame;
+
+public class MyFrame extends Frame{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 455151721946405263L;
+
+}

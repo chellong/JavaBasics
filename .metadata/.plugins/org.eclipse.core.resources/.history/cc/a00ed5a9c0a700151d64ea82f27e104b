@@ -1,0 +1,12 @@
+package com.example.test;
+
+import com.example.game.MyFrame;
+
+public class GameFrame4 extends MyFrame{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8817503736712929333L;
+
+}

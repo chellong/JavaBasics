@@ -1,0 +1,20 @@
+package com.example.game;
+
+import java.awt.Frame;
+import java.awt.event.WindowListener;
+
+public class MyFrame extends Frame{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 455151721946405263L;
+
+	MyFrame(){
+		addListener();
+	}
+	
+	 public void addListener(){
+		
+	}
+}

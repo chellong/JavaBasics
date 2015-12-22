@@ -1,0 +1,16 @@
+package com.example.plane;
+
+import java.awt.Graphics;
+
+public class Bullet {
+	
+	protected double degree;
+	protected double x,y;
+	protected double width = 10;
+	protected double height = 10;
+	protected int speed;
+	
+	public void draw(Graphics g){
+		
+	}
+}

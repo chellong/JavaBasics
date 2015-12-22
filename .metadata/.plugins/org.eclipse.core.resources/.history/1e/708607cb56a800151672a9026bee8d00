@@ -1,0 +1,10 @@
+package com.example.plane;
+
+public class Bullet {
+	
+	protected double degree;
+	protected double x,y;
+	protected double width = 10;
+	protected double height = 10;
+	protected int speed;
+}

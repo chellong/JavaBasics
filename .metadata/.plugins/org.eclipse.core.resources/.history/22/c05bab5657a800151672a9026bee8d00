@@ -1,0 +1,24 @@
+package com.example.plane;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Bullet {
+	
+	protected double degree;
+	protected double x,y;
+	protected double width = 10;
+	protected double height = 10;
+	protected int speed;
+	
+	public void draw(Graphics g){
+		
+		Color c = g.getColor();
+		g.setColor(Color.RED);
+		g.drawOval((int)x,(int) y, (int)width,(int) height);
+		g.setColor(c);
+		
+		x += speed * Math.cos(degree);
+		y += speed * Math.sin(degree);
+	}
+}

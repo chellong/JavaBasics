@@ -1,0 +1,18 @@
+package com.example.plane;
+
+import java.awt.Graphics;
+import java.awt.Image;
+
+public class Explode {
+	
+	double x,y;
+	static Image[] imags;
+	int count;
+	
+	public void draw(Graphics g){
+		
+		g.drawImage(img, dx1, x,y,null);
+		
+	}
+
+}

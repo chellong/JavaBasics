@@ -1,0 +1,14 @@
+package com.example.plane;
+
+import com.example.constant.Constant;
+
+public class GameObject {
+	
+	protected double degree;
+	protected double x = Constant.GAME_WIDTH / 2;
+	protected double y = Constant.GAME_HEIGHT / 2;
+	protected double width = 4;
+	protected double height = 4;
+	protected int speed = 4;
+
+}

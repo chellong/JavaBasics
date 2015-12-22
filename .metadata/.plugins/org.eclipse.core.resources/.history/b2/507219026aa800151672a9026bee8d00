@@ -1,0 +1,15 @@
+package com.example.plane;
+
+import java.awt.Image;
+
+public class Explode {
+	
+	double x,y;
+	static Image[] imags;
+	int count;
+	
+	public void draw(Graphics g){
+		
+	}
+
+}

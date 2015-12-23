@@ -1,0 +1,48 @@
+package com.example.collection;
+
+import java.util.LinkedList;
+
+/**
+ * 1、idea
+ * 		student
+ * 
+ * 2、jdk中hashMap 底层实现是数组和链表
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class MyMapOnePlus {
+
+	LinkedList<Object>[] arr = new LinkedList[100];
+	int size;
+
+	public void put(Object key, Object valus) {
+		MyEntry e = new MyEntry(key, valus); 
+		int a = key.hashCode() / 100;
+		
+		if(arr[a] == null ){
+			LinkedList<Object> list = new LinkedList<Object>();
+			arr[a] = list;
+			list.add(e);
+		}else{
+			 arr[a].add(e);
+		}
+	}
+
+	public Object get(Object key) {
+		int a = key.hashCode() / 100;
+		if(arr[a] != null){
+			LinkedList<Object> list = arr[a];
+			list.get(key);
+		}
+	}
+
+	public boolean conainsKey(Object key) {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+}
+

@@ -1,0 +1,14 @@
+package com.example.collection;
+
+public class MyArrayList {
+
+	private transient Object[] elementDate;
+	
+	private int size;
+
+	public MyArrayList() {
+	}
+	
+	
+	
+}

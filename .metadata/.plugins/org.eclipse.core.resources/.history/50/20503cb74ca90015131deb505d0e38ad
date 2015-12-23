@@ -1,0 +1,66 @@
+package com.example.collection;
+
+
+public class MyLinkedList {
+
+	private Node first;
+	private Node last;
+	
+	private int size;
+	
+	public void add(Object obj){
+		Node n = new Node();
+		if(first == null){
+			n.setPrevious(null);
+			n.setObj(obj);
+			n.setNext(null);
+			
+			first = n;
+			last = n;
+			
+			
+		}else{
+			n.setPrevious(last);
+			n.setObj(obj);
+			n.setNext(null);
+			
+			last.setNext(n);
+			last = n;
+		}
+		size ++;
+	}
+	
+	public Object get(int index) {
+		
+		if(first == null){
+			return null;
+		}else{
+			Node temp = first;
+			for(int i = 0; i < index; i++ ){
+				temp = temp.next;
+				if(temp == null){
+					return null;
+				}
+			}
+			return temp.obj;
+		}
+	}
+	
+	public int size(){
+		return size;
+	}
+	
+	public static void main(String[] args) {
+
+		MyLinkedList list = new MyLinkedList();
+		for (int i = 0; i < 10; i++) {
+			list.add(null);
+		}
+		
+		String str = (String)list.get(8);
+		System.out.println(str + list.size);
+	}
+	
+}
+
+

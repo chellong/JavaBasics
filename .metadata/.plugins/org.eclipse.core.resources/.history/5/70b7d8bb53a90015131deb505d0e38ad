@@ -1,0 +1,22 @@
+package com.example.collection;
+
+/**
+ * 1、自己实现map
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class MyMapOne {
+
+}
+
+class MyEntry{
+	
+	Object key;
+	Object Obj;
+	public MyEntry(Object key, Object obj) {
+		super();
+		this.key = key;
+		Obj = obj;
+	}
+}

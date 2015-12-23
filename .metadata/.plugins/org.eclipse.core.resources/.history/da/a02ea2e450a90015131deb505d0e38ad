@@ -1,0 +1,109 @@
+package com.example.collection;
+
+
+public class MyLinkedList {
+
+	private Node first;
+	private Node last;
+	
+	private int size;
+	
+	public void add(Object obj){
+		Node n = new Node();
+		if(first == null){
+			n.setPrevious(null);
+			n.setObj(obj);
+			n.setNext(null);
+			
+			first = n;
+			last = n;
+			
+			
+		}else{
+			n.setPrevious(last);
+			n.setObj(obj);
+			n.setNext(null);
+			
+			last.setNext(n);
+			last = n;
+		}
+		size ++;
+	}
+	
+	public int size(){
+		return size;
+	}
+	
+	public Node node(int index){
+		
+		Node temp = null;
+		if(first == null){
+			return null;
+		}else{
+			temp = first;
+			for(int i = 0; i < index; i++ ){
+				temp = temp.next;
+			}
+		}
+		return temp;
+	}
+	
+	public Object get(int index) {
+		
+			Node node = node(index);
+			if(node != null){
+				return node.obj;
+			}else{
+				return null;
+			}
+	}
+	
+	public void remove(int index){
+		
+		Node temp = node(index);
+		
+		if(temp != null){
+			Node up = temp.getPrevious();
+			Node down = temp.getNext();
+			
+			up.next = down;
+			down.previous = up;
+			
+			size--;
+		}
+	}
+	
+	public void add(int index,Object obj){
+
+		Node temp = node(index);
+		Node node = new Node(null,obj,null);
+		
+		if(temp != null){
+			Node up = temp.previous;
+			up.next = node;
+			node.previous = up;
+			node.next = temp; 
+			temp.previous = node;
+		}
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+
+		MyLinkedList list = new MyLinkedList();
+		for (int i = 0; i < 10; i++) {
+			list.add(null);
+		}
+		
+		Object obj = list.get(8);
+		if(obj != null){
+			System.out.println(obj);
+		}
+		System.out.println(list.size);
+	}
+	
+}
+
+

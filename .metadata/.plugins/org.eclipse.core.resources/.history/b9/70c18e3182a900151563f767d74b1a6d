@@ -1,0 +1,37 @@
+package com.example.collection;
+
+import java.util.HashMap;
+
+/**
+ * 1¡¢idea
+ * 
+ * @author ±±·ÉµÄºòÄñ
+ *
+ */
+public class MyHashSet {
+	
+	protected HashMap<Object,Object> map;
+	private int size;
+	private static final Object PRESENT = new Object();
+
+	public MyHashSet(){
+		map = new HashMap<Object,Object>();
+	}
+	
+	
+	public int getSize() {
+		return size;
+	}
+
+
+	public void add(Object obj){
+		map.put(obj, PRESENT);
+		size++;
+	}
+	
+	public static void main(String[] args) {
+		
+		MyHashSet set = new MyHashSet();
+		set.add("1");
+	}
+}

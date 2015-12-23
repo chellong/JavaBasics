@@ -7,6 +7,8 @@ import java.util.LinkedList;
  * 
  * 2、jdk中hashMap 底层实现是数组和链表
  * 
+ * 3、如过equals相等则hashcode相等
+ * 		反过来不一定
  * @author 北飞的候鸟
  *
  */
@@ -17,9 +19,12 @@ public class MyMapOnePlus {
 	int size;
 
 	public void put(Object key, Object valus) {
+		
 		MyEntry e = new MyEntry(key, valus);
-		int a = key.hashCode() / 100;
-
+		int hash =  key.hashCode();
+		hash = hash < 0 ? -hash : hash;
+		int a = hash / 100;
+		
 		if (arr[a] == null) {
 			LinkedList<Object> list = new LinkedList<Object>();
 			arr[a] = list;
@@ -38,7 +43,9 @@ public class MyMapOnePlus {
 	}
 
 	public Object get(Object key) {
-		int a = key.hashCode() / arr.length;
+		int hash =  key.hashCode();
+		hash = hash < 0 ? -hash : hash;
+		int a = hash / 100;
 		if (arr[a] != null) {
 			LinkedList<Object> list = arr[a];
 			for (int i = 0; i < list.size(); i++) {
@@ -53,7 +60,10 @@ public class MyMapOnePlus {
 
 	public boolean conainsKey(Object key) {
 
-		int a = key.hashCode() / 100;
+		int hash =  key.hashCode();
+		hash = hash < 0 ? -hash : hash;
+		int a = hash / 100;
+		
 		if (arr[a] != null) {
 			LinkedList<Object> list = arr[a];
 			for (int i = 0; i < list.size(); i++) {

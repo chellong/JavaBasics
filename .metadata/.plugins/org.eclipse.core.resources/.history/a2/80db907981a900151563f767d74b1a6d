@@ -1,0 +1,18 @@
+package com.example.collection;
+
+import java.util.HashMap;
+
+public class MyHashSet {
+	
+	HashMap<Object,Object> map;
+	
+	private static final Object PRESENT = new Onject;
+
+	public MyHashSet(){
+		map = new HashMap<>();
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

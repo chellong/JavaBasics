@@ -1,5 +1,19 @@
 package com.example.collection;
 
+/**
+ * 1、双链表可以从结尾开始，可以提高效率
+ * 			（JDK里面就是这么做的）
+ * 
+ * 可以用移位在提高效率
+ * 
+ * 左移一位 / 2
+ * 右移移位 * 2
+ * 	
+ * 移位效率比除法效率高
+ * 
+ * @author 北飞的候鸟
+ *
+ */
 
 public class MyLinkedList {
 
@@ -40,10 +54,21 @@ public class MyLinkedList {
 		if(first == null){
 			return null;
 		}else{
-			temp = first;
-			for(int i = 0; i < index; i++ ){
-				temp = temp.next;
+			if(index < (size >> 1)){
+				temp = first;
+				
+				for(int i = 0; i < index; i++ ){
+					temp = temp.next;
+				}
+			}else{
+				temp = last;
+				
+				for(int i = size -1; i > index; i--){
+					temp = temp.previous;
+				}
 			}
+			
+			
 		}
 		return temp;
 	}
@@ -88,11 +113,15 @@ public class MyLinkedList {
 		}
 	}
 	
-	
-	
 	public static void main(String[] args) {
 
 		MyLinkedList list = new MyLinkedList();
+		for(int i = 0; i < 100 ; i++){
+			list.add(i);
+		}
+		
+		System.out.println(list.get(0));
+		System.out.println(list.get(56));
 	}
 	
 }

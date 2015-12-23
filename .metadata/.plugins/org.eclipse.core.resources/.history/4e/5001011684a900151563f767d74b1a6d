@@ -1,0 +1,14 @@
+package com.example.test;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+public class TestMian {
+
+	public static void main(String[] args) {
+		
+		DateFormat aft = new SimpleDateFormat("yyyy-MM-dd");
+		Employee e = new Employee(0001,"0001","0001",,);
+		
+	}
+}

@@ -50,7 +50,7 @@ public class MyArrayList {
 	private void add(int index,Object obj) {
 
 		 if (index > size || index < 0)
-	            throw new IndexOutOfBoundsException();
+				 throw new IndexOutOfBoundsException();
 		 
 		ensureCapacityInternal(size + 1); 
 		System.arraycopy(elementDate, index, elementDate, index + 1,

@@ -1,0 +1,31 @@
+package com.example.treeset;
+
+import java.util.TreeSet;
+
+/**
+ * 1、treeset数据元素可以排序且不可重复
+ * 		对比：
+ * 			set借口：hashset，元素必须重写hashCode和equals方法
+ * 			 去重：比较等于0即重复
+ * 1》元素可以重复 java.lang.Comparable +　comparTo new TreeSet（）
+ * 
+ * 2》排序业务类 comparator + compare
+ * @author 北飞的候鸟
+ *
+ */
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		Person p1 = new Person("1",1);
+		Person p2 = new Person("2",1);
+		Person p3 = new Person("3",1);
+		Person p4 = new Person("4",1);
+		Person p5 = new Person("5",1);
+		
+		TreeSet<Person> treeSet = new TreeSet<>();
+		
+		treeSet.add(p1);
+	}
+
+}

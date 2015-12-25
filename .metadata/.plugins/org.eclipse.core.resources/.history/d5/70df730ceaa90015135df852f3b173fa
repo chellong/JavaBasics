@@ -1,0 +1,35 @@
+package com.example.generic_;
+
+public interface Comparable<T> {
+
+}
+
+/**
+ * 移除
+ * @author 北飞的候鸟
+ *
+ * @param <T>
+ */
+class Com implements Comparable{
+	
+}
+
+
+/**
+ * 继承
+ * 小于等于
+ * @author 北飞的候鸟
+ *
+ * @param <T>
+ */
+class Com_<T> implements Comparable<T>{
+	
+}
+
+class Com_1<T> implements Comparable {
+	
+}
+
+class Com implements Comparable<T>{
+	
+}

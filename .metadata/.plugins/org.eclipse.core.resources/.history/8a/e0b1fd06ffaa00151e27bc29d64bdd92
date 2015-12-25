@@ -1,0 +1,23 @@
+package com.example.testmap;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Test_ {
+	
+	public static void main(String[] args) {
+		
+		String str = "this is a number of this numbers";
+		String[] strs = str.split(" ");
+		for(String  s: strs ){
+			System.out.print(s + ",");
+		}
+		Map<String,Letter> letters = new HashMap<String, Letter>();
+		
+		Letter col = null;
+		if(null == (col = letters.get(temp))){
+			
+		}
+	}
+
+}

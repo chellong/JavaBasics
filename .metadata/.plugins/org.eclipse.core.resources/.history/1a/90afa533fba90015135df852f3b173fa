@@ -1,0 +1,18 @@
+package com.example.testmap;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Test {
+
+	public static void main(String[] args) {
+		String str = "this is a number of this numbers";
+		String[] strs = str.split(" ");
+		Map<String,Letter> letters = new HashMap<String, Letter>();
+		for(String temp : strs){
+			if( !letters.containsKey(temp) ){
+				letters.put(temp, value)
+			}
+		}
+	}
+}

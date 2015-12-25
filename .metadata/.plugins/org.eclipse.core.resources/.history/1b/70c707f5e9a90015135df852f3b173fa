@@ -1,0 +1,29 @@
+package com.example.generic_;
+
+public interface Comparable<T> {
+
+}
+
+/**
+ * ÒÆ³ý
+ * @author ±±·ÉµÄºòÄñ
+ *
+ * @param <T>
+ */
+class Com implements Comparable{
+	
+}
+
+
+
+class Com_<t> implements Comparable<T>{
+	
+}
+
+class Com_1<T> implements Comparable {
+	
+}
+
+class Com implements Comparable<T>{
+	
+}

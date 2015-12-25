@@ -1,0 +1,53 @@
+package com.example.generic_;
+
+/**
+ * 1、父类位泛型类
+ * 	1.1、属性
+ *  1.2、方法
+ * @author 北飞的候鸟
+ *
+ * @param <T>
+ */
+public abstract class Father<T> {
+	
+	T name;
+	public abstract void test(T t);
+}
+
+/**
+ * 1、子类申明的时候制定具体的类型
+ * 2、属性类型为具体类型
+ * 3、方法同理
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+
+class Child extends Father<String>{
+
+	String t2;
+	
+	@Override
+	public void test(String t) {
+		
+	}
+	
+}
+
+/**
+ * 1、子类位泛型类
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+
+class Child_<T> extends Father<T>{
+
+	T t2;
+
+	@Override
+	public void test(T t) {
+		
+	}
+	
+}

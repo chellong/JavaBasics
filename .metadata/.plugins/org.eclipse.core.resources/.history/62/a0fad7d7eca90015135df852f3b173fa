@@ -1,0 +1,17 @@
+package com.example.mtest;
+
+import java.util.Iterator;
+
+public class MyArrayList_ implements Iterator{
+
+	@Override
+	public boolean hasNext() {
+		return false;
+	}
+
+	@Override
+	public Object next() {
+		return null;
+	}
+
+}

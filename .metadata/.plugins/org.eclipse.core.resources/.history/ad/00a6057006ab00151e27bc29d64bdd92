@@ -1,0 +1,29 @@
+package com.example.sort;
+
+import java.util.Arrays;
+
+public class BubbleSortl {
+
+	public static void main(String[] args) {
+
+		int[] arr = { 9, 1, 2, 3, 4, 5, 6, 7, 8 };
+		boolean sorted = true;
+		for (int j = 0; j < arr.length; j++) {
+			sorted = true;
+			System.out.print("╣з"+ ( j + 1 ) + "лк");
+			for (int i = 0; i < arr.length - 1 - j; i++) {
+				if (arr[i] > arr[i + 1]) {
+					System.out.println("╣зр╩лк");
+					int temp = arr[i];
+					arr[i] = arr[i + 1];
+					arr[i + 1] = temp;
+				}
+				System.out.println(Arrays.toString(arr));
+			}
+		}
+
+		for (int s : arr) {
+			System.out.println(s);
+		}
+	}
+}

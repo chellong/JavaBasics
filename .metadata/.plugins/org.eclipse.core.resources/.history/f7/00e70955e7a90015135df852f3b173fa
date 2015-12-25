@@ -1,0 +1,30 @@
+package com.example.generic;
+
+import java.io.Closeable;
+import java.io.IOException;
+
+public class TestMethod {
+
+	public static <T> void test(T a){
+		System.out.println(a);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static <T extends Closeable> void test(T...a){
+		
+		for(T temp : a){
+			try {
+				if(temp != null){
+					temp.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		test(123);
+	}
+
+}

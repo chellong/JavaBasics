@@ -1,0 +1,7 @@
+package com.example.generic_;
+
+public abstract class Father<T> {
+	
+	T name;
+	public abstract void test(T t);
+}

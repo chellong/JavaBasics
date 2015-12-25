@@ -1,0 +1,10 @@
+package com.example.testmap;
+
+import java.util.List;
+
+public class ClassRome {
+	
+	private String no;
+	private List<Student> stus;
+	private double total;
+}

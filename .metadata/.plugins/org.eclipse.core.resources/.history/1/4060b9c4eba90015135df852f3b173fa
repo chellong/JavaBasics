@@ -1,0 +1,25 @@
+package com.example.mtest;
+
+/**
+ * hasNext
+ * next
+ * @author ±±·ÉµÄºòÄñ
+ *
+ */
+public class MyArrayList {
+
+	int[] elem = {1,2,3,4,5,6,7,8,9};
+	private int size = elem.length;
+	
+	public boolean hasNext() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}

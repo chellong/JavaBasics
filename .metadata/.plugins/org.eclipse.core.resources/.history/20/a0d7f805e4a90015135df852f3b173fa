@@ -1,0 +1,8 @@
+package com.example.testgeneric;
+
+public class Student {
+	
+	private Object javase;
+	private Object oracle;
+
+}

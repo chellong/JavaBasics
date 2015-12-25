@@ -1,0 +1,9 @@
+package com.example.testmap;
+
+public class Student {
+	
+	String name;
+	int no;
+	double score;
+
+}

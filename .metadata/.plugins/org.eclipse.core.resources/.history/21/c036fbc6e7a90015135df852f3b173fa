@@ -1,0 +1,5 @@
+package com.example.generic_;
+
+public class Father<T> {
+
+}

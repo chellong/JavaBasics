@@ -1,0 +1,18 @@
+package com.example.generic_;
+
+public abstract class Father<T> {
+	
+	T name;
+	public abstract void test(T t);
+}
+
+class Child extends Father<String>{
+
+	String t2;
+	
+	@Override
+	public void test(String t) {
+		
+	}
+	
+}

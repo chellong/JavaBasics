@@ -1,7 +1,0 @@
-package com.example.test;
-
-import java.util.Comparator;
-
-public class StringComp implements Comparator<String> {
-
-}

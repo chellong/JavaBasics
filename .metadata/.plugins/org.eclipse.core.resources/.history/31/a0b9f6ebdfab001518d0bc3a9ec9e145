@@ -1,0 +1,15 @@
+package com.example.guava;
+
+/**
+ * map 键和值都不重复
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class GuavaDemo08 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

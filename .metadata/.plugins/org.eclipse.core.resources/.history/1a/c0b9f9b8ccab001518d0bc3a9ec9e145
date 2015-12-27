@@ -1,0 +1,22 @@
+package com.example.testproperties;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+public class TestLoad {
+
+	public static void main(String[] args) {
+		Properties pro = new Properties();
+		try {
+			pro.load(new FileReader("src/com/example/"
+						+ "testproperties/pro.properties"));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

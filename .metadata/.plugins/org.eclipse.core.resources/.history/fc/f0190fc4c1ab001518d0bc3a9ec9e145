@@ -1,0 +1,13 @@
+package com.example.testenummap;
+
+public class TestEnumMap {
+
+	public static void main(String[] args) {
+		
+		
+	}
+}
+
+enum Season{
+	SPRING,SUMMER,AUTUMN,WINTER;
+}

@@ -1,0 +1,9 @@
+package com.example.testenumeration;
+
+public class TestStringTokenizer {
+
+	public static void main(String[] args) {
+		
+		String email = "352977335@qq.com";
+	}
+}

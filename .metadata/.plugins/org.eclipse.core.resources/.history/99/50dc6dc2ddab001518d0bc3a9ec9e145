@@ -1,0 +1,20 @@
+package com.example.guava;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * 分析教师缩教授的课程
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class GuavaDemo07 {
+	
+	public static void main(String[] args) {
+		
+		Map<String,String> map = new HashMap<String, String>();
+		map.put("改革开放", value)
+	}
+
+}

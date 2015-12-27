@@ -1,0 +1,29 @@
+package com.example.queue;
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+
+public class MyStack <T>{
+
+	
+	private Queue<T> container = new ArrayDeque<T>();
+	private int cap;
+	
+	
+	public MyStack(int cap) {
+		
+		this.cap = cap;
+	}
+	
+	public boolean puth(T e){
+		if(container.size() > cap +1){
+			
+		}
+		
+	}
+	
+	
+	
+	
+	
+}

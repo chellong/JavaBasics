@@ -1,0 +1,37 @@
+package com.example.queue;
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		Queue<Requset> que = new ArrayDeque<Requset>();
+		
+		for(int i = 0; i < 10; i++ ){
+			final int num = i; 
+			que.offer(new Requset() {
+				
+				@Override
+				public void deposit() {
+					System.out.println("µÚ£º" + num +"ÈË"+ Math.random() * 10000);
+				}
+			}); 
+		}
+	}
+	
+	public static void dealWith(Queue<Requset> que){
+		Requset req = null;
+		while((req = que.poll()) != null){
+			
+		}
+	}
+
+}
+
+interface Requset{
+	
+	void deposit();
+	
+}

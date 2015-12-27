@@ -1,0 +1,9 @@
+package com.example.testIdentityhashmap;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

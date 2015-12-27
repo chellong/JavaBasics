@@ -1,0 +1,14 @@
+package com.example.guava;
+
+import java.util.List;
+
+import com.google.common.collect.Lists;
+
+public class GuavaDemo01 {
+
+	public static void main(String[] args) {
+		List<String> list = Lists.newArrayList("moon"
+				,"son","dad","refer");
+		//找出回文，正反一样
+	}
+}

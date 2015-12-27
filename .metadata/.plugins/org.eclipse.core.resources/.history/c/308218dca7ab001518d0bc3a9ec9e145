@@ -1,0 +1,10 @@
+package com.example.queue;
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+
+public class MyStack <T>{
+
+	
+	private Queue<T> container = new ArrayDeque<T>();
+}

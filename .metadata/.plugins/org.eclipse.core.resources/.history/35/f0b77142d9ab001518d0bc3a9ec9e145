@@ -1,0 +1,15 @@
+package com.example.guava;
+
+public class GuavaDemo03 {
+
+	/**
+	 * 转换
+	 * 
+	 * 组合是函数变成
+	 * 确保容器的大小不超过5
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+	}
+}

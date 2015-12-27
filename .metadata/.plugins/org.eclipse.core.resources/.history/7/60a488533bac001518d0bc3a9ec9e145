@@ -1,0 +1,14 @@
+package com.example.commons;
+
+import org.apache.commons.collections4.Predicate;
+import org.apache.commons.collections4.functors.NotNullPredicate;
+
+public class Demo02 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("not null");
+		Predicate<String> notNull = (NotNullPredicate<String>).INSTANCE;
+		
+	}
+}

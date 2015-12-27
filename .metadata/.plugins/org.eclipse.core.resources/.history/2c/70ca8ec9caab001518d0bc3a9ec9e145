@@ -1,0 +1,39 @@
+package com.example.testproperties;
+
+import java.util.Properties;
+
+/**
+ * 1、.properties
+ * 2、字符流
+ * 3、.xml 
+ * 
+ * 资源配置文件的读写
+ * 
+ * 
+ * key value 为字符串
+ * @author 北飞的候鸟
+ *
+ */
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Properties pro = new Properties();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

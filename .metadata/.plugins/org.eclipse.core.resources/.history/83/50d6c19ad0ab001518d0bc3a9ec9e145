@@ -1,0 +1,13 @@
+package com.example.syuread;
+
+/**
+ * 
+ * @author ±±·ÉµÄºòÄñ
+ *
+ */
+public class TestOnlyRead {
+
+	public static void main(String[] args) {
+		
+	}
+}

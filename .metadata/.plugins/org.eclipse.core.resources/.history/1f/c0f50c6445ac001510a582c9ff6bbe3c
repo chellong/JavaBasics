@@ -1,0 +1,13 @@
+package com.example.commons;
+
+public class Demo05 {
+
+	public static void main(String[] args) {
+		
+		
+	}
+	
+	public static void mapIt(){
+		System.out.println("mapµü´úÆ÷");
+	}
+}

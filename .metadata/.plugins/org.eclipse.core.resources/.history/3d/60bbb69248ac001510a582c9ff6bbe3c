@@ -1,0 +1,26 @@
+package com.example.commons;
+
+import org.apache.commons.collections4.BidiMap;
+import org.apache.commons.collections4.bidimap.DualHashBidiMap;
+
+/**
+ * 1、双向map
+ * 有序
+ * 无序
+ * @author 北飞的候鸟
+ *
+ */
+public class Demo06 {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void hashMap(){
+		BidiMap<String, String> map = new DualHashBidiMap<>();
+		map.put("1", "1");
+		map.put("2", "2");
+		map.put("3", "3");
+		
+	}
+}

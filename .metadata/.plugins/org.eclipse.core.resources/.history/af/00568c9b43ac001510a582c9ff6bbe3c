@@ -1,0 +1,53 @@
+package com.example.commons;
+
+import org.apache.commons.collections4.Predicate;
+import org.apache.commons.collections4.Transformer;
+import org.apache.commons.collections4.functors.SwitchTransformer;
+
+public class Demo04 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("自定义转换");
+		
+		Predicate<Employee> isLow = new Predicate<Employee>(){
+
+			@Override
+			public boolean evaluate(Employee em) {
+				return Integer.parseInt(em.getSalary()) < 10000;
+			}
+			
+		};
+		
+		Predicate<Employee> isHight = new Predicate<Employee>(){
+
+			@Override
+			public boolean evaluate(Employee em) {
+				return Integer.parseInt(em.getSalary()) > 10000;
+			}
+		};
+		
+		Predicate[] pree = {isLow,isHight};
+		
+		Transformer<Employee,Level> lowTrans = new Transformer<Employee, Level>() {
+			
+			@Override
+			public Level transform(Employee in) {
+				return new Level(in.getName(),"卖身中");
+			}
+		};
+		
+		Transformer<Employee,Level> highTrans = new Transformer<Employee, Level>() {
+			
+			@Override
+			public Level transform(Employee in) {
+				return new Level(in.getName(),"养身中");
+			}
+		};
+		
+		Transformer[] trans = {lowTrans,highTrans};
+		
+		Transformer switchTrans = new SwitchTransformer();
+		
+	}
+}

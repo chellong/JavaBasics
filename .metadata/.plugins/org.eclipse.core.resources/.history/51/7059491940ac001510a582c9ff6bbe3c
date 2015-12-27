@@ -1,0 +1,21 @@
+package com.example.commons;
+
+import java.text.SimpleDateFormat;
+
+import org.apache.commons.collections4.Transformer;
+
+public class Demo03 {
+
+	public static void main(String[] args) {
+		System.out.println("内置类型转换，长整星转时间");
+		
+		Transformer<Long, String> trans = new Transformer<Long, String>(){
+
+			@Override
+			public String transform(Long in) {
+				return new SimpleDateFormat("yyyy-MM-DD").format(in);
+			}
+			
+		};
+	}
+}

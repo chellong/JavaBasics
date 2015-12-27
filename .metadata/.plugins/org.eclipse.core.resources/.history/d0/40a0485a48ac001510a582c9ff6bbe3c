@@ -1,0 +1,13 @@
+package com.example.commons;
+
+/**
+ * 1¡¢Ë«Ïòmap
+ * @author ±±·ÉµÄºòÄñ
+ *
+ */
+public class Demo06 {
+
+	public static void main(String[] args) {
+		
+	}
+}

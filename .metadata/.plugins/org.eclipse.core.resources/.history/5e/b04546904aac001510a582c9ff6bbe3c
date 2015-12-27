@@ -1,0 +1,31 @@
+package com.example.commons;
+
+import java.util.Iterator;
+
+import org.apache.commons.collections4.Bag;
+import org.apache.commons.collections4.bag.HashBag;
+
+/**
+ * bag 包允许重复
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class Demo07 {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void hashBag(){
+		Bag<String> bag = new HashBag<String>();
+		
+		bag.add("a");
+		bag.add("a", 5);
+		
+		Iterator<String> it = bag.iterator();
+		while(it.hasNext()){
+			
+		}
+	}
+}

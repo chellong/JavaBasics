@@ -1,0 +1,7 @@
+package com.example.commons;
+
+public class Level {
+
+	private String name ;
+	private String level;
+}

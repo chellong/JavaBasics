@@ -1,8 +1,0 @@
-package com.example.testtile;
-
-import java.io.File;
-
-public class TreeFile {
-
-	File file = new File("D:/");
-}

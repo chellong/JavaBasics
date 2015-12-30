@@ -1,0 +1,41 @@
+package com.example.util;
+
+import java.util.List;
+
+/**
+ * 1、分割文件
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class SplitFile {
+	
+	//文件的路径
+	private String filePath;
+	//File Size
+	private int size;
+	//Split File Size
+	private Long blockSize;
+	//
+	private List<String> blockPath;
+	
+	
+	public SplitFile(String filePath) {
+
+		
+	}
+	
+	
+	public SplitFile(String filePath, int size, Long blockSize,
+			List<String> blockPath) {
+		super();
+		this.filePath = filePath;
+		this.size = size;
+		this.blockSize = blockSize;
+		this.blockPath = blockPath;
+	}
+	
+	
+	
+
+}

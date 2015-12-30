@@ -1,0 +1,9 @@
+package com.example.pattern;
+
+public class Voice {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,8 +1,0 @@
-package com.example.collection;
-
-public class MyMapOnePlus {
-
-	MyEntry[] arr = new MyEntry[100];
-	int size;
-}
-

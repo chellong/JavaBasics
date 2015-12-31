@@ -1,9 +1,0 @@
-package com.example.generic_;
-
-public interface Comparable<T> {
-
-}
-
-class Com implements Comparable<T>{
-	
-}

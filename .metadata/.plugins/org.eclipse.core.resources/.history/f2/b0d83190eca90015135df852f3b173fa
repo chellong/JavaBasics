@@ -1,8 +1,0 @@
-import com.example.mtest.MyArrayList;
-
-
-public class Test {
-
-	MyArrayList list = new MyArrayList();
-	
-}

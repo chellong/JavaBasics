@@ -1,5 +1,0 @@
-package com.example.generic_;
-
-public interface Comparable<T> {
-
-}

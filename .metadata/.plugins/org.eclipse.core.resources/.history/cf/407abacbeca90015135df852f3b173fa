@@ -1,7 +1,0 @@
-package com.example.mtest;
-
-import java.util.Iterator;
-
-public class MyArrayList_ implements Iterator{
-
-}

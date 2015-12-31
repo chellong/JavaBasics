@@ -1,9 +1,0 @@
-package com.example.mtest;
-
-public class MyArrayList {
-
-	
-	public static void main(String[] args) {
-		
-	}
-}

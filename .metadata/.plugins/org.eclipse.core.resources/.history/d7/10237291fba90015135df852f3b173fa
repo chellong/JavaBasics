@@ -1,7 +1,0 @@
-package com.example.testmap;
-
-public class Letter {
-
-	private String name;
-	private int count;
-}

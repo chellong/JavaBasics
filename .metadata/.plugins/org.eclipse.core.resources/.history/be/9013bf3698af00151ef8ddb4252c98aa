@@ -1,0 +1,19 @@
+package com.example.util;
+
+
+public class Utils {
+
+	public static void close(Closeable ... io ){
+		for(Closeable temp : io){
+			try {
+			if(temp != null){
+					temp.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+}

@@ -21,6 +21,4 @@ public class TsetStringBulider {
 		}
 		System.out.println(sb);
 	}
-
-
 }

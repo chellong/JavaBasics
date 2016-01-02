@@ -1,0 +1,8 @@
+package com.example.StaticProxy;
+
+public class StaticProxy {
+
+	public static void main(String[] args) {
+		
+	}
+}

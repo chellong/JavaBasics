@@ -1,0 +1,65 @@
+package com.example.StaticProxy;
+
+/**
+ * ¾²Ì¬´úÀí
+ * 
+ * @author ±±·ÉµÄºòÄñ
+ *
+ */
+public class StaticProxy {
+
+	public static void main(String[] args) {
+		
+	}
+}
+
+interface Marry{
+	public abstract void marry();
+}
+
+class You implements Marry{
+
+	@Override
+	public void marry() {
+		
+	}
+}
+
+class WeddingCompan implements Marry{
+
+	private Marry you;
+	
+	
+	
+	public WeddingCompan() {
+		super();
+	}
+
+	
+	
+
+
+	public WeddingCompan(Marry you) {
+		this.you = you;
+	}
+
+
+	private void before(){
+		System.out.println("Çë¼í");
+	}
+
+
+	@Override
+	public void marry() {
+		you.marry();
+	}
+	
+}
+
+
+
+
+
+
+
+

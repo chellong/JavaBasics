@@ -1,0 +1,25 @@
+一、节点流：离数据源程序最近的流	
+1、字节流：可以处理一切（纯文本、音频、视频）
+	1）输入流：inputStream FileInputSream
+				ByteArrayInputStream
+	
+		操作read（字节数组）
+		
+		a) 中间容器 byte[] flush = new byte[length]
+		b) 接收长度 int len = 0
+		c) 循环读取 while(-1 != (len = liu.read(flush))){}
+		d) 操作：输出，拷贝
+	2）输出流
+		ByteArrayOutPutStream
+		
+		操作 write （字节数组，0，长度）输出
+
+1、字节流
+
+	1）输入流 readerFileReader
+	
+	2）输出流 writerFiler
+
+
+
+二、处理流

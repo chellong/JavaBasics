@@ -1,0 +1,17 @@
+package com.example.tertjoin;
+
+public class testJoin extends Thread{
+
+	@Override
+	public void run() {
+		super.run();
+	}
+	
+	/**
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+	}
+}

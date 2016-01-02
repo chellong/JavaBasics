@@ -7,9 +7,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.RandomAccessFile;
+import java.io.SequenceInputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 /**
  * 1、分割文件
@@ -26,29 +29,29 @@ public class SplitFile {
 	int size;
 	// Split File Size
 	private long blockSize;
-	//文件list
+	// 文件list
 	private List<String> blockPath;
-	//分割后的存放目录
+	// 分割后的存放目录
+	@SuppressWarnings("unused")
 	private String destBlockPath;
-	//文件名字
+	// 文件名字
 	private String fileName;
 	// 文件大小
 	private long fileLength;
 
-	
 	public SplitFile() {
 
 		this.blockPath = new ArrayList<String>();
 	}
 
-	public SplitFile(String filePath,String destBlockPath) {
+	public SplitFile(String filePath, String destBlockPath) {
 
-		this(filePath, 1024,destBlockPath);
+		this(filePath, 1024, destBlockPath);
 		this.blockSize = 1024;
 		this.filePath = filePath;
 	}
 
-	public SplitFile(String filePath, long blockSize ,String destBlockPath) {
+	public SplitFile(String filePath, long blockSize, String destBlockPath) {
 
 		this();
 		this.destBlockPath = destBlockPath;
@@ -176,43 +179,89 @@ public class SplitFile {
 	 * 文件的合并
 	 */
 
-	public void margeFile(String destPath) {
+	public void margeFile1(String destPath) {
 
 		File dest = new File(destPath);
 
-		
 		BufferedOutputStream bos = null;
 		BufferedInputStream bis = null;
 
 		try {
-			bos = new BufferedOutputStream(new FileOutputStream(dest,true));
+			bos = new BufferedOutputStream(new FileOutputStream(dest, true));
 			for (int i = 0; i < this.blockSize; i++) {
 
 				bis = new BufferedInputStream(new FileInputStream(new File(this.blockPath.get(i))));
-				
+
 				byte[] flush = new byte[1024];
 				int len = 0;
-				
-				while(-1 != (len = bis.read(flush, 0, len))){
+
+				while (-1 != (len = bis.read(flush, 0, len))) {
 					bos.write(flush, 0, len);
 				}
-				
-				
+
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}finally{
-			if(bis != null){
+		} finally {
+			if (bis != null) {
 				try {
 					bis.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
+
+			if (bos != null) {
+				try {
+					bos.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	public void margeFile(String destPath)  {
+
+		File dest = new File(destPath);
+
+		BufferedOutputStream bos = null;// 输出流
+		SequenceInputStream sis = null;// 输入流
+
+		Vector<InputStream> vi = new Vector<>();
+
+		try {
 			
-			if(bos != null){
+			for (int i = 0; i < this.blockPath.size(); i++) {
+				vi.add(new BufferedInputStream(new FileInputStream(new File(this.blockPath.get(i)))));
+
+			}
+			sis = new SequenceInputStream(vi.elements());
+			bos = new BufferedOutputStream(new FileOutputStream(dest, true));
+
+			byte[] flush = new byte[1024];
+			int len = 0;
+
+			while (-1 != (len = sis.read(flush, 0, len))) {
+				bos.write(flush, 0, len);
+			}
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (sis != null) {
+				try {
+					sis.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (bos != null) {
 				try {
 					bos.close();
 				} catch (IOException e) {

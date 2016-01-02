@@ -1,0 +1,16 @@
+package com.example.test_producer_consumer;
+
+public class Player implements Runnable{
+
+	private Movie m;
+
+	@Override
+	public void run() {
+		
+	}
+	
+	public static void main(String[] args) {
+ 
+	}
+
+}

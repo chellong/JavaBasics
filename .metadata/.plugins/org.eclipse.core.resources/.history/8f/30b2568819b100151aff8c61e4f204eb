@@ -1,0 +1,21 @@
+
+package com.example.testInfo;
+
+public class Test extends Thread{
+	
+	@Override
+	public void run() {
+
+		while(true){
+			System.out.println("...");
+		}
+	}
+	
+	public static void main(String[] args) {
+		Test test = new Test();
+		test.start();
+		
+		System.out.println(test.getName());
+	}
+
+}

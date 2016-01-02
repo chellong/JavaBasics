@@ -1,0 +1,52 @@
+package com.example.diesyn;
+
+/**
+ * 过多的加锁会造成死锁
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class TestDieSyn {
+
+	public static void main(String[] args) {
+		Test test= new Test()
+		Thread t = new Thread(test);
+	
+	}
+	
+}
+
+class Test implements Runnable{
+	
+	Object goodls = new Object();
+	Object moneys = new Object();
+	
+	
+	@Override
+	public void run() {
+		
+	}
+	
+	public void test(){
+		
+		synchronized (goodls) {
+		
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		synchronized (moneys){
+			
+		}
+		
+		System.out.println("一手给钱");
+	
+	}
+	
+	
+	 
+}
+

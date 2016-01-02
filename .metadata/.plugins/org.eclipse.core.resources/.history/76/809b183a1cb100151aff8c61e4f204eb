@@ -1,0 +1,43 @@
+package com.example.testsynchronized;
+
+/**
+ * 同步块{
+ * 
+ * }
+ * 
+ * 同步方法
+ * @author 北飞的候鸟
+ *
+ */
+public class Test  {
+	
+	public static void main(String[] args) {
+		
+		MyThread target = new MyThread();
+		Thread t = new Thread(target);
+	}
+
+}
+
+
+class MyThread implements Runnable{
+	
+	
+	private int num = 50;
+
+	@Override
+	public void run() {
+		
+		test();
+
+	}
+
+	private  void test() {
+		while (true) {
+			if (num <= 0) {
+				break;
+			}
+			System.out.println(Thread.currentThread().getName() + "  " + num--);
+		}
+	}
+}

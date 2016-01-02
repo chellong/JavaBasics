@@ -1,0 +1,5 @@
+package com.example.tertjoin;
+
+public class testJoin extends Thread{
+
+}

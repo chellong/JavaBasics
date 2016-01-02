@@ -1,0 +1,16 @@
+package com.example.testsingle;
+
+public class TestSingle {
+
+	private static TestSingle instance = null;
+	
+	private TestSingle(){
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+}

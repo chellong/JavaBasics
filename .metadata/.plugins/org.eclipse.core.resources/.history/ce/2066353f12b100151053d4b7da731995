@@ -1,0 +1,26 @@
+package com.example.testCallable;
+
+import java.util.concurrent.Callable;
+
+/**
+ * 使用callable创建线程
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class Test {
+
+	public static void main(String[] args) {
+		
+	}
+	
+}
+
+class Race implements Callable<Integer>{
+
+	@Override
+	public Integer call() throws Exception {
+		return 1111;
+	}
+	
+}

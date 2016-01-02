@@ -1,0 +1,8 @@
+package com.example.testudp;
+
+public class ClientTtpe {
+
+	public static void main(String[] args) {
+		
+	}
+}

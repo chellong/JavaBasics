@@ -1,0 +1,9 @@
+package com.example.testudp;
+
+
+public class ServerTyep {
+
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,8 +1,0 @@
-package com.example.guava;
-
-public class GuavaDemo04 {
-
-	public static void main(String[] args) {
-		
-	}
-}

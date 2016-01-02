@@ -1,0 +1,17 @@
+package com.example.chat;
+
+import java.io.InputStreamReader;
+
+public class Receive implements Runnable{
+
+	private InputStreamReader is;
+	private OutOfMemoryError os;
+	
+	
+	
+	@Override
+	public void run() {
+		
+	}
+
+}

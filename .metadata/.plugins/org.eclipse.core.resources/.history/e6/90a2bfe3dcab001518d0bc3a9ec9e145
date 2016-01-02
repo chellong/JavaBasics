@@ -1,8 +1,0 @@
-package com.example.guava;
-
-public class GuavaDemo06 {
-
-	public static void main(String[] args) {
-		String str = "there have a good man his is very handsome";
-	}
-}

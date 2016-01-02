@@ -1,0 +1,11 @@
+package com.example.testinetsocket;
+
+import java.net.InetSocketAddress;
+
+public class TestSocketAddress {
+
+	public static void main(String[] args) {
+		
+		InetSocketAddress address = new InetSocketAddress("127.0.0.1", 1993);
+	}
+}

@@ -1,0 +1,10 @@
+package com.example.chat;
+
+public class Send implements Runnable{
+
+	@Override
+	public void run() {
+		
+	}
+
+}

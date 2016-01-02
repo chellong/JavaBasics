@@ -1,0 +1,26 @@
+package com.example.chat;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+
+public class Send implements Runnable{
+
+	
+	private BufferedReader console;
+	private DataOutputStream dos;
+	
+	
+	public Send(BufferedReader console) {
+		this.console = new BufferedReader(new InputStreamReader(System.in));
+	}
+
+
+
+
+	@Override
+	public void run() {
+		
+	}
+
+}

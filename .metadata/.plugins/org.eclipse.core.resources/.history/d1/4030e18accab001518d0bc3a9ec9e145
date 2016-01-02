@@ -1,8 +1,0 @@
-package com.example.testproperties;
-
-public class TestLoad {
-
-	public static void main(String[] args) {
-		
-	}
-}

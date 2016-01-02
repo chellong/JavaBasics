@@ -1,0 +1,17 @@
+package com.example.testudp;
+
+import java.net.DatagramSocket;
+import java.net.SocketException;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		try {
+			DatagramSocket ds = new DatagramSocket();
+			
+		} catch (SocketException e) {
+			e.printStackTrace();
+		}
+	}
+}

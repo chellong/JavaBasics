@@ -1,0 +1,23 @@
+package com.example.test;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		//URL url = new URL("http://www.baidu.com:80/index.html#a");
+		try {
+			URL url = new URL("http://www.baidu.com:80");
+			String host = url.getHost();
+			System.out.println(host);
+			
+			URL u = new URL(url,"/b");
+			
+			System.out.println(u.toString());
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+	}
+}

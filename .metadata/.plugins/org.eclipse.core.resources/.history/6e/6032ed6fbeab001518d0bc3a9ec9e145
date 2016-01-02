@@ -1,9 +1,0 @@
-package com.example.testreference;
-
-import java.util.WeakHashMap;
-
-public class TestWeakHashMap {
-	
-	WeakHashMap<String,String> map = new TestWeakHashMap();
-
-}

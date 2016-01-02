@@ -1,0 +1,38 @@
+package com.example.testtcp;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+/**
+ * 服务端
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class Server {
+	
+	/**
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		try {
+			//穿件客户端
+			ServerSocket serverSocket = new ServerSocket(1993);
+			//接受客户端的连接，阻塞式
+			Socket socket =  serverSocket.accept();
+			
+			
+			
+			socket.close();
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,40 @@
+package com.example.testudp;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.SocketException;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		try {
+			//创建服务器 + 端口
+			DatagramSocket ds = new DatagramSocket(1994);
+
+			String msg = "12345678";
+			byte[] data = msg.getBytes();
+			
+			DatagramPacket packet = new DatagramPacket(data, data.length);
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		} catch (SocketException e) {
+			e.printStackTrace();
+		}
+	}
+}

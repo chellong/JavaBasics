@@ -1,0 +1,6 @@
+package com.example.constant;
+
+public class Constant {
+
+	public static String path = "D:\\test.txt";
+}

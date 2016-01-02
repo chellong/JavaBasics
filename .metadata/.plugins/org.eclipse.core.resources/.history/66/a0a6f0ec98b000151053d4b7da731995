@@ -1,0 +1,14 @@
+package com.example.util;
+
+public class Test {
+	
+
+	public static void main(String[] args) {
+		
+		SplitFile file = new SplitFile("C:\\Users\\北飞的候鸟\\Desktop\\新建文件夹test.txt", 50);
+		
+		System.out.println(file.size);
+		
+		file.split("C:\\Users\\北飞的候鸟\\Desktop\\新建文件夹");
+	}
+}

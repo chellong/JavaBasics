@@ -1,0 +1,16 @@
+package com.example.util;
+
+import com.example.constant.Constant;
+
+public class Test {
+	
+
+	public static void main(String[] args) {
+		
+		SplitFile file = new SplitFile(Constant.path, 1200);
+		
+		System.out.println(file.size);
+		
+		
+	}
+}

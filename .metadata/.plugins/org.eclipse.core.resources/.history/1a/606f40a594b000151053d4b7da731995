@@ -1,0 +1,12 @@
+package com.example.util;
+
+import java.nio.charset.MalformedInputException;
+
+public class Test {
+	
+
+	public static void main(String[] args) {
+		SplitFile file = new SplitFile("", 1200);
+		
+	}
+}

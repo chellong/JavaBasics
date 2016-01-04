@@ -1,0 +1,13 @@
+package com.example.httpserver_1;
+
+
+public class Servlet {
+	
+	public Servlet(Request request) {
+	}
+
+	public static void main(String[] args) {
+		
+	}
+
+}

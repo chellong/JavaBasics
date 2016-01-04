@@ -1,0 +1,61 @@
+package com.example.httpserver_1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server {
+
+	private ServerSocket serverSocket;
+
+	public static void main(String[] args) {
+		Server server = new Server();
+		server.start();
+		server.recive();
+	}
+
+	public void start() {
+		try {
+			serverSocket = new ServerSocket(8080);
+			this.recive();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 接收客户端
+	 * 
+	 */
+	public void recive() {
+		try {
+			Socket socket = serverSocket.accept();
+			
+			Dispatcher dispatcher = new Dispatcher(socket);
+			new Thread(dispatcher).start();
+			
+		}catch(Exception e){
+			
+			e.printStackTrace();
+		}
+			
+			
+			
+			
+	}
+
+	/**
+	 * 停止服务
+	 */
+	public void stop() {
+		try {
+			serverSocket.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

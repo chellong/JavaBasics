@@ -1,0 +1,109 @@
+package com.example.httpserver_1;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.StringTokenizer;
+
+public class Request {
+
+	private static final String CRLF  = "/r/n";
+	private static final String BLANK = "";
+	
+	private InputStream is;
+	
+	private Map<String,List<String>> parameterMapValues;
+	
+	private String requestInfo;
+	private String method;
+	private String url;
+	
+	
+	public Request() {
+	
+		method = "";
+		url = "";
+		parameterMapValues = new HashMap<>();
+		requestInfo = "";
+	}
+	
+	public Request(InputStream is){
+		
+		this();
+		this.is = is;
+		try{
+			
+			byte[] data = new byte[20480];
+			int len = is.read(data);
+			requestInfo = new String(data,0,len);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		parseRequestInfo();
+	}
+	
+	
+	public void parseRequestInfo(){
+		
+		//接收请求参数
+		String paramString = "";
+		
+		//获取请求参数
+		String firstLine = requestInfo.substring(0,requestInfo.indexOf(CRLF));
+		int idx = requestInfo.indexOf("/");
+		this.method = firstLine.substring(0, idx).trim();
+		String urlStr = firstLine.substring(idx,firstLine.indexOf("HTTP/")).trim();
+		if(this.method.equalsIgnoreCase("post")){
+			
+			this.url = urlStr;
+			paramString = requestInfo.substring(requestInfo.indexOf(CRLF)).trim();
+		
+		}else if(this.method.equalsIgnoreCase("get")){
+			
+			if(urlStr.contains("?")){
+				
+				String[] urlArray = urlStr.split("\\?");
+				this.url = urlArray[0];
+				paramString = urlArray[1];
+				
+			}else{
+				
+				this.url = urlStr;
+			}
+		}
+		if(paramString.equals("")){
+			return;
+		}
+		parseParams(paramString);
+	
+	}
+	
+	private void parseParams(String paramString){
+		
+		StringTokenizer token = new StringTokenizer(paramString, "&");
+		while(token.hasMoreTokens()){
+			
+			String keyValue = token.nextToken();
+			System.out.println(keyValue);
+		}
+	}
+	
+	public static void main(String[] args){
+		String str = "name=123&pwd=123&sex=123";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

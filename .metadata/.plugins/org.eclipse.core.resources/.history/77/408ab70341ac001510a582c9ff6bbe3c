@@ -1,7 +1,0 @@
-package com.example.commons;
-
-public class employee {
-
-private String name;
-private String salary;
-}

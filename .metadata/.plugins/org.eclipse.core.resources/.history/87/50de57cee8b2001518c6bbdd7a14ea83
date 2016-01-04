@@ -1,0 +1,16 @@
+package com.example.httpserver_1;
+
+import java.io.Closeable;
+
+public class Util {
+	
+	public void close(Closeable ... clo){
+		
+		for(Closeable temp : clo){
+			if(temp != null){
+				temp.close();
+			}
+		}
+	}
+
+}

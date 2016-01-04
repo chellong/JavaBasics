@@ -1,0 +1,16 @@
+package com.example.httpserver_2;
+
+
+public abstract class Servlet {
+	
+	public void service(Request request, Respond respond) throws Exception {
+		
+		this.doGet();
+		this.doPost();
+		
+	}
+	
+	public abstract void doGet() throws Exception;
+	public abstract void doPost() throws Exception;
+
+}

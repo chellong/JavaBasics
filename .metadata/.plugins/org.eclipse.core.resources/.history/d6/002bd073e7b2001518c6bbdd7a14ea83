@@ -1,0 +1,16 @@
+package com.example.httpserver_1;
+
+/**
+ * 一个请求生成一个此对象
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+public class Dispatcher implements Runnable {
+
+	@Override
+	public void run() {
+
+	}
+
+}

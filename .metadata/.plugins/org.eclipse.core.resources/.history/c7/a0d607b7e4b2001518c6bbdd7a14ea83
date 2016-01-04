@@ -1,0 +1,8 @@
+package com.example.httpserver_1;
+
+public class Respond {
+	
+	public Respond() {
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.example.httpserver_2;
+
+public class LoginServlet extends Servlet{
+
+	@Override
+	public void doGet(Request request, Respond respond) throws Exception {
+		login("123","123");
+	}
+
+	@Override
+	public void doPost(Request request, Respond respond) throws Exception {
+		
+	}
+	
+	
+	public boolean login(String name,String pwd){
+		return name.equals("123") && pwd.equals("123");
+	}
+
+}

@@ -1,0 +1,58 @@
+package com.example.httpserver_1;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class Server {
+
+	private ServerSocket serverSocket;
+	
+	private boolean isShutDown = false;
+
+	public static void main(String[] args) {
+		Server server = new Server();
+		server.start();
+		server.recive();
+	}
+
+	public void start() {
+		try {
+			serverSocket = new ServerSocket(8080);
+			this.recive();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 接收客户端
+	 * 
+	 */
+	public void recive() {
+		try {
+			/**
+			 * 
+			 * 创建分发线程
+			 * 
+			 */
+			while(!this.isShutDown){
+				new Thread(new Dispatcher(serverSocket.accept())).start();
+			}
+			
+		}catch(Exception e){
+			
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 停止服务
+	 */
+	public void stop() {
+		
+		isShutDown = true;
+		Util.closeSocket(serverSocket);
+	}
+
+}

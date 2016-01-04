@@ -1,0 +1,11 @@
+package com.example.httpserver_2;
+
+
+public class Servlet {
+	
+	public void service(Request request, Respond respond) {
+		
+		
+	}
+
+}

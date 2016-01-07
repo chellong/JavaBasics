@@ -1,0 +1,24 @@
+package com.example.dynamic_javaCompiler;
+
+import java.net.URL;
+
+/**
+ * classLoader
+ * @author ±±·ÉµÄºòÄñ
+ *
+ */
+public class TestJavaCompilerDemo02 {
+	
+	public static void main(String[] args) {
+		
+		try{
+			
+			URL[] url = new URL[]{new URL("E:/JavaBasics/Jav-Basics/HelloWorld.java")};
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+
+}

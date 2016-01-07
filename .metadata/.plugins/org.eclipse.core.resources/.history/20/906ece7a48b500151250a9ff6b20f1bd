@@ -1,0 +1,44 @@
+package com.example.test_jvm;
+
+/**
+ * 
+ * 1、读取class文件
+ * 2、
+ * 
+ * @author 北飞的候鸟
+ *
+ */
+
+@SuppressWarnings("all")
+public class TestJvmDemo01 {
+	
+	
+	public static void main(String[] args) {
+		new A();
+		System.out.println(A.width);
+	}
+
+}
+
+class A{
+	public static int width = 100;
+	
+	static {
+		System.out.println("静态初始化A");
+		width = 1000;
+	}
+	public A(){
+		System.out.println("A");
+	}
+}
+
+class B extends A{
+	
+	public static int width = 200;
+	
+	static {
+		System.out.println("静态初始化b");
+		width = 300;
+	}
+	
+}

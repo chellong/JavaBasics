@@ -1,0 +1,20 @@
+package com.example.dynamic_javaCompiler;
+
+/**
+ * classLoader
+ * @author ±±·ÉµÄºòÄñ
+ *
+ */
+public class TestJavaCompilerDemo02 {
+	
+	public static void main(String[] args) {
+		
+		try{
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+
+}

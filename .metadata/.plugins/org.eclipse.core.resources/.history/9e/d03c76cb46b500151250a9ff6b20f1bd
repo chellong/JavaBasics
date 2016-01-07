@@ -1,0 +1,22 @@
+package com.example.test_jvm;
+
+public class TestJvmDemo01 {
+	
+	
+	public static void main(String[] args) {
+		A a = new A()
+	}
+
+}
+
+class A{
+	public static int width = 100;
+	
+	static {
+		System.out.println("æ≤Ã¨≥ı ºªØA");
+		width = 300;
+	}
+	public A{
+		System.out.println("A");
+	}
+}

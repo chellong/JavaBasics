@@ -1,0 +1,72 @@
+package com.example.testjavassist;
+
+import java.lang.reflect.Modifier;
+
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtMethod;
+
+public class TestJavassistDemo02 {
+
+	/**
+	 * 
+	 * 处理类的基本方法
+	 * @throws Exception 
+	 * 
+	 */
+	public static void test01() throws Exception{
+		
+		ClassPool pool = ClassPool.getDefault();
+		CtClass cc = pool.get("com.example.testjavassist.Entity");
+		
+		byte[] bytes = cc.toBytecode();
+		System.out.println(bytes);
+		System.out.println(cc.getName());
+		System.out.println(cc.getSimpleName());
+		System.out.println(cc.getSuperclass());
+		System.out.println(cc.getInterfaces());
+		
+	}
+	
+	public static void test02() throws Exception{
+	
+		ClassPool pool = ClassPool.getDefault();
+		CtClass cc = pool.get("com.example.testjavassist.Entity");
+		
+		CtMethod m = new CtMethod(CtClass.intType,"add",
+				new  CtClass[]{CtClass.intType,CtClass.intType}, cc);
+		
+		m.setModifiers(Modifier.PUBLIC);
+		m.setBody("{return a + b;}");
+		cc.addMethod(m);
+		
+	}
+	
+	
+	public static void main(String[] args) throws Exception {
+		
+		test01();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

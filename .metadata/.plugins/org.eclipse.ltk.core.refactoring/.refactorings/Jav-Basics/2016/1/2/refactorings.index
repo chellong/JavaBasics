@@ -6,3 +6,16 @@
 1452089635156	Rename type 'Demo01'
 1452089646096	Rename type 'Demo02'
 1452090348708	Rename type 'Demo03'
+1452152038296	Rename type 'TestJavaCompiler'
+1452155914165	Rename package 'com.example.dynamic_javaCompiler'
+1452155923838	Copy file
+1452167743692	Delete element
+1452178280860	Delete element
+1452178341922	Move compilation unit
+1452178352573	Move compilation units
+1452178370461	Move compilation units
+1452178381624	Rename type 'TestDemo06'
+1452178392185	Rename type 'TestDemo07'
+1452178407323	Delete elements
+1452178448137	Rename type 'TestDemo04'
+1452178456485	Rename type 'TestDemo05'

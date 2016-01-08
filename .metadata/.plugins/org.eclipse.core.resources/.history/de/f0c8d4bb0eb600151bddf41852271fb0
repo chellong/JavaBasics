@@ -1,0 +1,25 @@
+package com.example.testnestedclass;
+
+@SuppressWarnings("all")
+public class TestDemo01 {
+	
+	static class StaticNestedClass{
+		
+	}
+	
+	private class FieldInnerClass{
+		
+	}
+	
+	void test(){
+		class LocalClass{
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

@@ -19,3 +19,8 @@
 1452178407323	Delete elements
 1452178448137	Rename type 'TestDemo04'
 1452178456485	Rename type 'TestDemo05'
+1452257130347	Rename package 'com.example.string'
+1452257144101	Rename package 'com.example.integer'
+1452257154236	Rename package 'com.example.comparator'
+1452257166475	Rename package 'com.example.array'
+1452257182361	Rename package 'com.example.algorithm'

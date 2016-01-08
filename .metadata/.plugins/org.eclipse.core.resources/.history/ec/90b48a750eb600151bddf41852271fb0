@@ -1,0 +1,15 @@
+package com.example.testnestedclass;
+
+public class TestDemo01 {
+	
+	private static class StaticNestedClass{
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

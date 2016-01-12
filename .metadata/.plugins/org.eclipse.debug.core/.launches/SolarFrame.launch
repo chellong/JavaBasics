@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/SolarSystem/src/com/example/solar/SolarFrame.java"/>
+<listEntry value="/GUI_SolarSystem/src/com/example/solar/SolarFrame.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.example.solar.SolarFrame"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SolarSystem"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="GUI_SolarSystem"/>
 </launchConfiguration>

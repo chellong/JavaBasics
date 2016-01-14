@@ -1,7 +1,0 @@
-package com.example.testjavassist;
-
-public class Entity {
-
-	private String ename;
-	private String empno;
-}

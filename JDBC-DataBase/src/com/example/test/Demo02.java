@@ -11,11 +11,16 @@ public class Demo02 {
 		Statement stmt = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testjdbc","root","123456");
+			conn = DriverManager.getConnection("jdbc:mysql://192.168.1.6:3306/test","root","3529");
 			
 			stmt = conn.createStatement();
-			String id = "5 or 1=1 ";
-			String sql = "delete from t_user where id="+id;
+			String name = "утаЫ";
+			String sql = "insert into t_user (username,pwd,regTime) values ('"+name+"',66666,now())";
+			
+			//stmt = conn.createStatement();
+			//String id = "5 or 1=1 ";
+			//String sql = "delete from t_user where id="+id;
+			
 			stmt.execute(sql);
 			
 		} catch (ClassNotFoundException e) {

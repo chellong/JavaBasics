@@ -14,7 +14,7 @@ public class Demo07 {
 		PreparedStatement ps = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testjdbc","root","123456");
+			conn = DriverManager.getConnection("jdbc:mysql://192.168.1.6:3306/test","root","3529");
 			
 			for(int i=0;i<1000;i++){
 				

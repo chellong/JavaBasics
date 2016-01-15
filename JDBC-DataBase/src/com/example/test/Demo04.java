@@ -13,11 +13,10 @@ public class Demo04 {
 		ResultSet rs = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testjdbc","root","123456");
+			conn = DriverManager.getConnection("jdbc:mysql://192.168.1.6:3306/test","root","3529");
 			
-			String sql = "select id,username,pwd from t_user where id>?";  
+			String sql = "select * from t_user";  
 			ps = conn.prepareStatement(sql);
-			ps.setObject(1, 2);  
 			
 			rs = ps.executeQuery();
 			while(rs.next()){

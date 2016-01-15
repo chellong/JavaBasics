@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Date;
 
 
 public class Demo06 {
@@ -14,15 +15,17 @@ public class Demo06 {
 		PreparedStatement ps2 = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testjdbc","root","123456");
+			conn = DriverManager.getConnection("jdbc:mysql://192.168.1.6:3306/test","root","3529");
 			
 			conn.setAutoCommit(false); 
 			
-			ps1 = conn.prepareStatement("insert into t_user (username,pwd) values (?,?)");
+			ps1 = conn.prepareStatement("insert into t_user (username,pwd,regTime) values (?,?,?)");
 			ps1.setObject(1, "1");
 			ps1.setObject(2, "123456");
+			ps1.setObject(3,new Date());
 			ps1.execute();
-			System.out.println("");
+			
+			System.out.println("ps1");
 			
 			try {
 				Thread.sleep(6000);
@@ -30,11 +33,13 @@ public class Demo06 {
 				e.printStackTrace();
 			}
 			
-			ps2 = conn.prepareStatement("insert into t_user (username,pwd) values (?,?,?)");
+			ps2 = conn.prepareStatement("insert into t_user (username,pwd,regTime) values (?,?,?)");
 			ps2.setObject(1, "1");
 			ps2.setObject(2, "123456");
+			ps2.setObject(3,new Date());
 			ps2.execute();			
-			System.out.println("");
+			
+			System.out.println("ps2");
 			
 			
 			conn.commit();

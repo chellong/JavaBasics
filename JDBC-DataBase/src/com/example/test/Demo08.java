@@ -29,7 +29,7 @@ public class Demo08 {
 		ResultSet rs = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testjdbc","root","123456");
+			conn = DriverManager.getConnection("jdbc:mysql://192.168.1.6:3306/test","root","3529");
 			
 			ps = conn.prepareStatement("select * from t_user where lastLoginTime>? and lastLoginTime<?  order by lastLoginTime ");
 			Timestamp start = new Timestamp(str2Date("2015-4-18 8:10:20"));

@@ -21,12 +21,12 @@ public class Demo05 {
 			stmt = conn.createStatement();
 			
 			for(int i=0;i<20000;i++){
-				stmt.addBatch("insert into t_user (username,pwd,regTime) values ('inster"+i+"',666666,now())");
+				stmt.addBatch("insert into t_user (username,pwd,regTime) values ('"+i+"',666666,now())");
 			}
 			stmt.executeBatch();
 			conn.commit();  
 			long end = System.currentTimeMillis();
-			System.out.println(""+(end-start));
+			System.out.println("执行两万条数据耗时"+(end-start));
 			
 			
 		} catch (ClassNotFoundException e) {
@@ -34,24 +34,33 @@ public class Demo05 {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally{
+			
 			try {
 				if(rs!=null){
+				
 					rs.close();
 				}
 			} catch (SQLException e) {
+			
 				e.printStackTrace();
 			}
+			
 			try {
+				
 				if(stmt!=null){
+				
 					stmt.close();
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 			try {
+			
 				if(conn!=null){
 					conn.close();
+			
 				}
+		
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}

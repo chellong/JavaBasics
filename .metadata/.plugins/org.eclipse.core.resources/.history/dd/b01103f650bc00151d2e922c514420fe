@@ -1,4 +1,4 @@
-package com.bjsxt.jdbc;
+package com.example.test;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,9 +10,8 @@ import java.util.Properties;
 
 public class JDBCUtil {
 
-	static Properties pros = null;   //可以帮助读取和处理资源文件中的信息
-	
-	static {   //加载JDBCUtil类的时候调用
+	static Properties pros = null;   
+	static {   
 		pros = new Properties();
 		try {
 			pros.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("db.properties"));

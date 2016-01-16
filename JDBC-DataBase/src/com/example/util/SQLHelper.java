@@ -10,7 +10,6 @@ import java.util.List;
 
 /**
  * 用于数据库访问的共同类
- * @author Aww
  *
  */
 public class SQLHelper {

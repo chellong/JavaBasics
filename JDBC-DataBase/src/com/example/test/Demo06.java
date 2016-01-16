@@ -8,6 +8,7 @@ import java.util.Date;
 
 
 public class Demo06 {
+	
 	@SuppressWarnings("null")
 	public static void main(String[] args) {
 		Connection conn = null;
